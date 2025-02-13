@@ -12,7 +12,7 @@ describe('Orange HRM Tests', () => {
     wrongCedentialAlert: "[role='alert']"
   }
 
-  const userData = {
+  const usarData = {
     userSuccess: {
 
       username: 'Admin',
