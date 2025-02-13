@@ -1,4 +1,4 @@
-import userData from '../fixtures/users/userData.json'
+import userData from '../fixtures/user-data.json'
 
 describe('Orange HRM Tests', () => {
 
