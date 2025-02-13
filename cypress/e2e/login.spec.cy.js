@@ -3,7 +3,7 @@ import userData from '../fixtures/users/userData.json'
 describe('Orange HRM Tests', () => {
 
   beforeEach(function () {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
   })
 
   const selectorsList = {
