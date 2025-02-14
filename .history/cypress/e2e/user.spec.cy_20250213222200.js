@@ -18,8 +18,6 @@ describe('Orange HRM Tests', () => {
     genericField: '.oxd-input--active',
     dateField: '[placeholder="yyyy-dd-mm"]',
     genericCombobox: '[tabindex="0"]',
-    secondItemCombobox: '.oxd-select-dropdown > :nth-child(2)',
-    thirdItemCombobox: '.oxd-select-dropdown > :nth-child(3)',
     dateCloseButton: '.--close',
     submitButton: '[type="submit"]',
   }
@@ -43,10 +41,10 @@ describe('Orange HRM Tests', () => {
     cy.get('body').should('contain', 'Successfully Updated')
 
     cy.get(selectorsList.genericCombobox).eq(0).click()
-    cy.get(selectorsList.secondItemCombobox).click()
+    cy.get('.oxd-select-dropdown > :nth-child(2)').click()
 
     cy.get(selectorsList.genericCombobox).eq(1).click()
-    cy.get(selectorsList.thirdItemCombobox).click()
+    cy.get('.oxd-select-dropdown > :nth-child(3)').click()
   })
 
   it('Login - Fail', () => {

@@ -17,11 +17,9 @@ describe('Orange HRM Tests', () => {
     lastNameField: '[name="lastName"]',
     genericField: '.oxd-input--active',
     dateField: '[placeholder="yyyy-dd-mm"]',
-    genericCombobox: '[tabindex="0"]',
-    secondItemCombobox: '.oxd-select-dropdown > :nth-child(2)',
-    thirdItemCombobox: '.oxd-select-dropdown > :nth-child(3)',
     dateCloseButton: '.--close',
     submitButton: '[type="submit"]',
+    selectButton: '[clear="false"]'
   }
 
   it.only('User Info Update - Success', () => {
@@ -42,11 +40,11 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.submitButton).eq(0).click()
     cy.get('body').should('contain', 'Successfully Updated')
 
-    cy.get(selectorsList.genericCombobox).eq(0).click()
-    cy.get(selectorsList.secondItemCombobox).click()
+    cy.get('[tabindex="0"]').eq(0).click()
+    cy.get('.oxd-select-dropdown > :nth-child(2)').click()
 
-    cy.get(selectorsList.genericCombobox).eq(1).click()
-    cy.get(selectorsList.thirdItemCombobox).click()
+    cy.get('[tabindex="0"]').eq(1).click()
+    cy.get('.oxd-select-dropdown > :nth-child(3)').click()
   })
 
   it('Login - Fail', () => {
